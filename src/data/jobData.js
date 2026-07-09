@@ -1,0 +1,58 @@
+const jobData = [
+    {
+        id: 1,
+        title: "Software Developer",
+        company: "Google",
+        location: "Noida",
+        salary: "$120,000",
+        type: "Full-time",
+        experience: "Freshers",
+    },
+    {
+        id: 2,
+        title: "Data Analyst",
+        company: "Microsoft",
+        location: "Noida",
+        salary: "$90,000",
+        type: "Full-time",
+        experience: "01 year",
+    },
+    {
+        id: 3,
+        title: "Software Engineer",
+        company:"Amazon",
+        location:"Noida",
+        salary: "$110,000",
+        type: "Full-time",
+        experience: "Freshers",
+    },
+    {
+        id: 4,
+        title: "AI Architect",
+        company: "Facebook",
+        location: "Noida",
+        salary: "$150,000",
+        type: "WFO",
+        experience: "3+ years",  
+    },
+    {
+        id: 5,
+        title: "React Developer",
+        company: "Meta",
+        location: "Bengaluru",
+        salary: "₹10-15 LPA",
+        type: "Hybrid",
+        experience: "1-2 years",
+    },
+    {
+       id: 3,
+       title: "Software Developement Engineer",
+       company: "Netflix",
+       location: "Hyderabad",
+       salary: "₹12-18 LPA",
+       type: "Full-Time",
+       experience: "1.5+ years",
+   },
+];
+
+export default jobData;
