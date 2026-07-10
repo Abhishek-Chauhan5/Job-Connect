@@ -6,7 +6,6 @@ function App() {
     <>
       <Navbar />
       <Home />
-      <p>lorem20</p>S
     </>
   );
 }
