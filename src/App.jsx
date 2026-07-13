@@ -1,11 +1,25 @@
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
+import Companies from "./pages/Companies/Companies";
+import Jobs from "./pages/Jobs/Jobs";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import About from "./pages/About/About";
+import { Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
     <>
       <Navbar />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/companies" element={<Companies />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
   );
 }
