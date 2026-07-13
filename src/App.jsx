@@ -5,6 +5,7 @@ import Jobs from "./pages/Jobs/Jobs";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import About from "./pages/About/About";
+import Footer from "./components/Footer/Footer"
 import { Routes, Route } from "react-router-dom";
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer/>
     </>
   );
 }
