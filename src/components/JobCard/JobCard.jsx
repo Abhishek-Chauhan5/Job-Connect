@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const JobCard = ({job}) => {
 
   return (
@@ -10,7 +11,7 @@ const JobCard = ({job}) => {
       </h2>
 
 
-      <p className="text-blue-600 font-medium mt-2">
+      <p className="text-red-600 font-medium mt-2">
         {job.company}
       </p>
 
@@ -36,10 +37,14 @@ const JobCard = ({job}) => {
       </div>
 
 
-      <button
-      className="mt-5 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
-        Apply Now
-      </button>
+      <Link to={`/job/${job.id}`}>
+
+          <button
+          className="mt-5 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+          View Details
+          </button>
+
+      </Link>
 
 
     </div>

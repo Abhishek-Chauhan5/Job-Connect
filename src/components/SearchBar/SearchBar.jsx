@@ -4,9 +4,10 @@ const SearchBar = () => {
 
             <input
             type="text"
-            placeholder="Search jobs...."
-            className="w-[450px] border border-gray-300 rounded-l-lg px-5 py-3 outline-none"
-            />
+            placeholder="Search Jobs..."
+            className="border p-4 w-[500px] rounded-l-lg"/>
+
+
             <button className="bg-blue-600 text-white px-8 rounded-r-lg hover:bg-blue-700 transition">
                 Search
             </button>
