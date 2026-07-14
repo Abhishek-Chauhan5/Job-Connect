@@ -45,7 +45,7 @@ const jobData = [
         experience: "1-2 years",
     },
     {
-       id: 3,
+       id: 6,
        title: "Software Developement Engineer",
        company: "Netflix",
        location: "Hyderabad",
@@ -53,6 +53,35 @@ const jobData = [
        type: "Full-Time",
        experience: "1.5+ years",
    },
+    {
+    id: 7,
+    title: "Frontend Developer",
+    company: "Google",
+    location: "Noida",
+    salary: "₹8-12 LPA",
+    type: "Full-Time",
+    experience: "2 Years",
+  },
+
+  {
+    id: 8,
+    title: "React Developer",
+    company: "Microsoft",
+    location: "Bengaluru",
+    salary: "₹10-15 LPA",
+    type: "Hybrid",
+    experience: "3 Years",
+  },
+
+  {
+    id: 9,
+    title: "Software Engineer",
+    company: "Amazon",
+    location: "Hyderabad",
+    salary: "₹12-18 LPA",
+    type: "Full-Time",
+    experience: "1 Year",
+  },
 ];
 
 export default jobData;
