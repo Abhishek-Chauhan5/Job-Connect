@@ -69,7 +69,7 @@ const jobData = [
     company: "Microsoft",
     location: "Bengaluru",
     salary: "₹10-15 LPA",
-    type: "Hybrid",
+    type: "Full-Time",
     experience: "3 Years",
   },
 
@@ -82,6 +82,33 @@ const jobData = [
     type: "Full-Time",
     experience: "1 Year",
   },
+  {
+  id: 10,
+  title: "UI/UX Designer",
+  company: "Adobe",
+  location: "Remote",
+  salary: "₹9-13 LPA",
+  experience: "2 Years",
+  type: "Remote",
+},
+{
+  id: 11,
+  title: "video editor",
+  company: "IBM",
+  location: "Remote",
+  salary: "₹9-15 LPA",
+  experience: "2+ Years",
+  type: "Remote",
+},
+{
+  id: 12,
+  title: "ML Engineer",
+  company: "Alphabet",
+  location: "Remote",
+  salary: "₹9-17 LPA",
+  experience: "1.5 Years",
+  type: "Remote",
+},
 ];
 
 export default jobData;
