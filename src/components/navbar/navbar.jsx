@@ -31,6 +31,11 @@ const Navbar = () => {
                         </Link>  
                     </li>
 
+                     <li>
+                        <Link to="/saved-jobs">
+                            Saved Jobs
+                        </Link>
+                    </li>    
                     <li>
                         <Link
                             to="/companies"

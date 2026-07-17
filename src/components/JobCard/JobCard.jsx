@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-const JobCard = ({job}) => {
+
+const JobCard = ({ job, saved, toggleSaveJob }) => {
 
   return (
 
@@ -37,12 +38,20 @@ const JobCard = ({job}) => {
       </div>
 
 
+      <button
+      onClick={() => toggleSaveJob(job.id)}
+      className="mt-4 w-full border border-blue-600 text-blue-600 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition"
+      >
+        {saved ? "✅ Saved" : "🔖 Save Job"}
+      </button>
+
+
       <Link to={`/job/${job.id}`}>
 
-          <button
-          className="mt-5 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+        <button
+        className="mt-5 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
           View Details
-          </button>
+        </button>
 
       </Link>
 
@@ -50,8 +59,6 @@ const JobCard = ({job}) => {
     </div>
 
   );
-
 }
-
 
 export default JobCard;

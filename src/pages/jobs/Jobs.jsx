@@ -1,6 +1,6 @@
 import jobData from "../../data/jobData";
 import JobCard from "../../components/JobCard/JobCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 const Jobs = () => {
@@ -8,20 +8,42 @@ const Jobs = () => {
 const [search, setSearch] = useState("");
 const [jobType, setJobType] = useState("All");
 const [location, setLocation] = useState("All");
+const [savedJobs, setSavedJobs] = useState(() => {
+  const storedJobs = localStorage.getItem("savedJobs");
 
+  return storedJobs ? JSON.parse(storedJobs) : [];
+});
+
+const toggleSaveJob = (id) => {
+  if (savedJobs.includes(id)) {
+    setSavedJobs(savedJobs.filter((jobId) => jobId !== id));
+  } else {
+    setSavedJobs([...savedJobs, id]);
+  }
+  };
+
+  useEffect(() => {
+  localStorage.setItem(
+    "savedJobs",
+    JSON.stringify(savedJobs)
+  );
+}, [savedJobs]);
+  
 const filteredJobs = jobData.filter((job) => {
 
-  const matchesSearch = job.title
-    .toLowerCase()
-    .includes(search.toLowerCase());
+  const matchesSearch =
+  job.title.toLowerCase().includes(search.toLowerCase()) ||
+  job.company.toLowerCase().includes(search.toLowerCase()) ||
+  job.location.toLowerCase().includes(search.toLowerCase());
 
   const matchesType =
     jobType === "All" || job.type === jobType;
 
   const matchesLocation =
-    location === "All" || job.locatoin === location;  
+    location === "All" || job.location === location;  
 
   return matchesSearch && matchesType && matchesLocation;
+
 
 });
 return (
@@ -89,11 +111,12 @@ filteredJobs.length > 0 ? (
 
 filteredJobs.map((job)=>(
 
-<JobCard 
-key={job.id}
-job={job}
+<JobCard
+  key={job.id}
+  job={job}
+  saved={savedJobs.includes(job.id)}
+  toggleSaveJob={toggleSaveJob}
 />
-
 ))
 
 ) : (
